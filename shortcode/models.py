@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 # Create your models here.
-from .utils import shortener
+from .utils import create_shortener
 
 
 class URL(models.Model):
@@ -13,7 +13,7 @@ class URL(models.Model):
 
 	def save(self, *args, **kwargs):
 		if self.short is None or self.short == "":
-			self.short = shortener()
+			self.short = create_shortener()
 		super(URL, self).save(*args, **kwargs)
 
 	def __str__(self):
