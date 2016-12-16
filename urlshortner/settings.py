@@ -77,17 +77,17 @@ WSGI_APPLICATION = 'urlshortner.wsgi.application'
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 DATABASES = {}
 DATABASES['default'] = dj_database_url.config()
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'NAME': 'urlshortener',
-        'USER':  'root',
-        'PASSWORD':  '713331',
-        'HOST': 'localhost',
-        'PORT': '3306',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#         'NAME': 'urlshortener',
+#         'USER':  'root',
+#         'PASSWORD':  '713331',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+#     }
+# }
 
 
 # Password validation
