@@ -1,9 +1,11 @@
 {% extends 'home.html' %}
 {% load staticfiles %}
 {% block body %}
+
 <h1>Success</h1>
 <hr width="30%">
 <br>
 <p>Your url: {{obj.url}}</p>
-<p>Shorted: {{obj.get_short_url}}</p>
+<p>Your shortened url is : <a href="{{ obj.get_short_url }}">{{ obj.get_short_url }}</a></p>
+
 {% endblock %}

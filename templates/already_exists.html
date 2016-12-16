@@ -6,5 +6,6 @@
 <hr width="30%">
 <br>
 <p>{{ obj.url }}</p>
-<p>{{ obj.get_short_url }}</p>
+<p>Your shortened url is : <a href="{{ obj.get_short_url }}">{{ obj.get_short_url }}</a></p>
+
 {% endblock %}
