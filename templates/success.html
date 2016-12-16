@@ -1,4 +1,9 @@
+{% extends 'home.html' %}
+{% load staticfiles %}
+{% block body %}
 <h1>Success</h1>
-<p>{{obj.url}}</p>
-<p>{{ obj.short }}</p>
-<p>{{obj.get_short_url}}</p>
+<hr width="30%">
+<br>
+<p>Your url: {{obj.url}}</p>
+<p>Shorted: {{obj.get_short_url}}</p>
+{% endblock %}

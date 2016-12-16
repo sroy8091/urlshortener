@@ -1,4 +1,10 @@
+{% extends 'home.html' %}
+{% load staticfiles %}
+{% block body %}
+
 <h1>Already Exists </h1>
+<hr width="30%">
+<br>
 <p>{{ obj.url }}</p>
-<p>{{obj.short}}</p>
 <p>{{ obj.get_short_url }}</p>
+{% endblock %}

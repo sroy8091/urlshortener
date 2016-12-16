@@ -5,15 +5,8 @@
   <link href="{% static 'css/home.css' %}" rel="stylesheet">
   <script src="{% static 'js/bootstrap.min.js' %}"></script>
 </head>
-{% block body %}
-<div class='back'>
-<h1>{{ title }}</h1>
-<hr width="30%">
+<h2>It's not here baby.</h2>
 <br>
-<form method='POST' action='/'>{% csrf_token %}
-  {{ form.as_p }}
-  <br>
-  <input class="btn-primary" type='submit' value'Shorten'>
-</form>
-<div>
-{% endblock %}
+<h4>You can go to our <a href="/">homepage</a> or keep hearing this goat</h4>
+<iframe src="http://www.youtube.com/embed/SIaFtAKnqBU?vq=hd720&rel=0&showinfo=0&controls=0&iv_load_policy=3&loop=1&playlist=SIaFtAKnqBU&modestbranding=1&autoplay=1">
+</iframe>
