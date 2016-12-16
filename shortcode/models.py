@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from django.core.urlresolvers import reverse
 # Create your models here.
 from .utils import create_shortener
 
@@ -13,8 +14,12 @@ class URL(models.Model):
 
 	def save(self, *args, **kwargs):
 		if self.short is None or self.short == "":
-			self.short = create_shortener()
+			self.short = create_shortener(self)
 		super(URL, self).save(*args, **kwargs)
 
 	def __str__(self):
 		return self.url
+
+	# def get_short_url(self):
+	# 	url_path = reverse('slug', kwargs={'shortcode':self.short})
+	# 	return "http://www.gooogle.com:8000"+url_path
