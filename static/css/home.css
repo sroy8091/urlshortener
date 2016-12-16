@@ -16,3 +16,10 @@ button, input, select, textarea {
     font-size: inherit;
     line-height: inherit;
 }
+
+a {
+  color:#fff;
+}
+a :hover {
+  color:red;
+}
