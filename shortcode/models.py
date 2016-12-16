@@ -20,6 +20,6 @@ class URL(models.Model):
 	def __str__(self):
 		return self.url
 
-	# def get_short_url(self):
-	# 	url_path = reverse('slug', kwargs={'shortcode':self.short})
-	# 	return "http://www.gooogle.com:8000"+url_path
+	def get_short_url(self):
+		url_path = reverse('shortview', kwargs={'short':self.short}, args=None)
+		return "chort.herokuapp.com"+url_path

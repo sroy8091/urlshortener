@@ -16,9 +16,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.conf.urls.static import static
 from shortcode.views import urlview, urlredirect
 urlpatterns = [
     url(r'^$', urlview.as_view()),
     url(r'^admin/', admin.site.urls),
     url(r'^url/(?P<short>[\w-]+)/$', urlredirect.as_view(), name='shortview'),
 ]
+# +  static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
