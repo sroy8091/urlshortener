@@ -1,5 +1,6 @@
 {% load staticfiles %}
 <head>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
   <link href="{% static 'css/bootstrap-theme.min.css' %}" rel="stylesheet">
   <link href="{% static 'css/home.css' %}" rel="stylesheet">
@@ -10,10 +11,16 @@
 <h1>{{ title }}</h1>
 <hr width="30%">
 <br>
-<form method='POST' action='/'>{% csrf_token %}
+<form method='POST' action='/'>
+    {% csrf_token %}
   {{ form.as_p }}
   <br>
-  <input class="btn-primary" type='submit' value'Shorten'>
+  <input class="btn-primary" type='submit' value='Shorten'>
 </form>
-<div>
+</div>
+
 {% endblock %}
+<footer>
+    <p><i class="foot fa fa-heart" style="color: #e4b9b9" aria-hidden="true"></i>&nbspMade with Love from <b>Sumit Roy<b></b></p>
+
+</footer>

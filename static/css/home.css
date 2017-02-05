@@ -23,3 +23,7 @@ a {
 a :hover {
   color:red;
 }
+
+footer p{
+  margin-top: 30%;
+}
