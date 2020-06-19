@@ -35,9 +35,5 @@ class urlview(View):
                 "obj": obj,
                 "created": created,
             }
-            if created:
-                template = "success.html"
-            else:
-                template = "already_exists.html"
-
+            template = "success.html" if created else "already_exists.html"
         return render(request, template ,context)
