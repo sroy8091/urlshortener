@@ -1,4 +1,4 @@
 dj-database-url==0.4.1
 Django==1.9
 gunicorn==19.6.0
-MySQL-python==1.2.5
+mysqlclient==2.0.1  # not required for local dev
