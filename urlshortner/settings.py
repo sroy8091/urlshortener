@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'urlshortner.wsgi.application'
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 DATABASES = {}
 DATABASES['default'] = dj_database_url.config()
-if len(DATABASES['default'])==0:
+if len(DATABASES['default']) == 0:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
