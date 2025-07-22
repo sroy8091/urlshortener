@@ -9,7 +9,7 @@ class urlredirect(View):
     def get(self, request, short):
         obj = URL.objects.get(short=short)
         # return HttpResponse("This is the url: {i}".format(i=obj))
-        return HttpResponseRedirect(obj)
+        return HttpResponseRedirect(obj.url)
 
 
 class urlview(View):
