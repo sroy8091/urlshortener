@@ -1,4 +1,4 @@
-"""urlshortner URL Configuration
+"""urlshortener URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.9/topics/http/urls/
@@ -14,13 +14,18 @@ Including another URLconf
     2. Import the include() function: from django.conf.urls import url, include
     3. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
-from django.conf.urls import url
+from django.urls import path
 from django.contrib import admin
+from django.conf import settings
 from django.conf.urls.static import static
 from shortcode.views import urlview, urlredirect
+
 urlpatterns = [
-    url(r'^$', urlview.as_view()),
-    url(r'^admin/', admin.site.urls),
-    url(r'^url/(?P<short>[\w-]+)/$', urlredirect.as_view(), name='shortview'),
+    path('', urlview.as_view()),
+    path('admin/', admin.site.urls),
+    path('url/<str:short>/', urlredirect.as_view(), name='shortview'),
 ]
-# +  static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root='static')
