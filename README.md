@@ -1,6 +1,6 @@
 # urlshortener
 
-Go to https://chort.herokuapp.com(down for now) for testing the project
+Go to https://urlshortener-two-blue.vercel.app/
 
 Few sample screenshots
 
