@@ -20,4 +20,4 @@ class URL(models.Model):
 
     def get_short_url(self):
         url_path = reverse('shortview', kwargs={'short': self.short})
-        return "https://your-domain.vercel.app" + url_path
+        return "https://urlshortener-two-blue.vercel.app" + url_path
